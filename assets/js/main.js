@@ -128,3 +128,32 @@
   window.addEventListener('load', initSwiper);
 
 })();
+//  motion animation for the home page
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+function animateOnScroll() {
+  animatedElements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (elementPosition < screenPosition) {
+      element.classList.add('animated');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+
+// motion on hover for the course items
+const courseItems = document.querySelectorAll('.course-item');
+
+courseItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.classList.add('hovered');
+  });
+
+  item.addEventListener('mouseout', () => {
+    item.classList.remove('hovered');
+  });
+});
