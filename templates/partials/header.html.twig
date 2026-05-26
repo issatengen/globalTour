@@ -27,15 +27,15 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto ">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="text-primary-emphasis">GlobalTour</h1>
+        <h1 class="text-primary-emphasis">Globalway Tours</h1>
       </a>
 
       <nav id="navmenu" class="navmenu text-primary-emphasis">
         <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="">Testimonial</a></li>
+          <li><a href="{{ path('app_home') }}" class="{% if app.request.attributes.get('_route') == 'app_home' %}active text-decoration-underline{% endif %}">Home</a></li>
+          <li><a href="" class="{% if app.request.attributes.get('_route') == 'app_about' %}active text-decoration-underline{% endif %}">About</a></li>
+          <li><a href="" class="{% if app.request.attributes.get('_route') == 'app_services' %}active text-decoration-underline{% endif %}">Services</a></li>
+          <li><a href="" class="{% if app.request.attributes.get('_route') == 'app_testimonials' %}active text-decoration-underline{% endif %}">Testimonial</a></li>
           <li class="megamenu has-dropdown">
             <a href="#">
               <span>Destinations</span>
@@ -89,7 +89,7 @@
               </li>
             </ul>
           </li>
-          <li><a href="">Contact</a></li>
+          <li><a class="{% if app.request.attributes.get('_route') == 'app_contact' %}active text-decoration-underline{% endif %}" href="{{ path('app_contact') }}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
