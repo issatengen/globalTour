@@ -1088,6 +1088,8 @@ section,
 .courses .course-item {
   border-radius: 5px;
   border: 1px solid rgba(var(--default-color-rgb), 0.1);
+  /* motion */
+  transition: 0.3s;
 }
 
 .courses .course-content {
@@ -1395,6 +1397,8 @@ section,
 .courses-list .course-item {
   border-radius: 5px;
   border: 1px solid rgba(var(--default-color-rgb), 0.1);
+  /* motion */
+  transition: 0.3s;
 }
 
 .courses-list .course-content {
